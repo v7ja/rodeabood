@@ -9,7 +9,7 @@ import os,sys,time,requests
 try:
 	Info = open("info.txt").read()
 except:
-	Info = "AbOOd"	
+	Info = "CaRLoS"	
 if ":" not in Info:
 	token = input("- EnTeR ToKeN : ");reqtoken = requests.get(f"https://api.telegram.org/bot{token}/getme").json();req = reqtoken["ok"]
 	if req == True:
@@ -22,21 +22,8 @@ else:
 	print("Ok .")
 info = open("info.txt",'r').read();token = info.split('\n')[0];own_id = info.split('\n')[1]
 bot = telebot.TeleBot(token)
-SaiF = types.InlineKeyboardButton(text = "- aBooD .", url = 'https://t.me/@c_7c7')
-channel = types.InlineKeyboardButton(text = "- 𝗖𝗛𝗔𝗡𝗡𝗘𝗟 .", url = 'https://t.me/ToGoLang')
-@bot.message_handler(commands=['check'])
-async def check(message):
- await bot.reply_to(message, "جار..")
- for session in open("account.txt","r").read():
-   FUCK = 1
-   client = Client("",
-      api_id=api_id,api_hash=api_hash,session_string=ses)
-   try: 
-    await client.start()
-   except: 
-    filee = open("account.txt","r+");lines = filee.readlines();lines = [line for line in lines if line.strip() != f"{session}"];filee.seek(0);filee.truncate();filee.writelines(lines);filee.close()
-  else : FUCK += 1; await bot.reply_to(message, 
-f" {FUCK} : عدد السيشنات الشغالة")
+SaiF = types.InlineKeyboardButton(text = "- Me ☬ .", url = 'https://t.me/c_7c7')
+channel = types.InlineKeyboardButton(text = "- 𝖬𝖾  .", url = 'https://t.me/ToGoLang')
 @bot.message_handler(commands=['start'])
 def start(message):
     global id, name
